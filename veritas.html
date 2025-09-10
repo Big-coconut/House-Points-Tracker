@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VERITAS House Entries</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- House card-style header -->
+    <div id="house-header" class="house-card house-veritas big-header">
+  <div class="house-name big-header">HOUSE OF VERITAS</div>
+  <div class="house-score" id="house-score"></div>
+</div>
+
+    <!-- Entries table -->
+    <h2 class="section-title">All Entries</h2>
+    <div class="entries">
+      Loading VERITAS entries...
+    </div>
+  <!-- See all entries button -->
+		<div class="see-all-container">
+			<a href="all.html" class="see-all-button">See All Entries</a>
+		</div>
+  </div>
+
+  <!-- Set global filter before loading JS -->
+  <script>
+    window.houseFilter = "VERITAS";
+  </script>
+  <script type="module" src="all.js"></script>
+</body>
+</html>

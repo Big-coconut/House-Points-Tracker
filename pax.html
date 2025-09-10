@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAX House Entries</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- House card-style header -->
+    <div id="house-header" class="house-card house-pax big-header">
+  <div class="house-name big-header">HOUSE OF PAX</div>
+  <div class="house-score" id="house-score"></div>
+</div>
+
+    <!-- Entries table -->
+    <h2 class="section-title">All Entries</h2>
+    <div class="entries">
+      Loading PAX entries...
+    </div>
+	<!-- See all entries button -->
+		<div class="see-all-container">
+			<a href="all.html" class="see-all-button">See All Entries</a>
+		</div>
+  </div>
+  
+
+  <!-- Set global filter before loading JS -->
+  <script>
+    window.houseFilter = "PAX";
+  </script>
+  <script type="module" src="all.js"></script>
+</body>
+</html>

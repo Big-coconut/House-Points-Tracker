@@ -18,7 +18,27 @@
             <!-- Recent entries table will be loaded here by JavaScript -->
             Loading recent entries...
         </div>
+		<!-- See all entries button -->
+		<div class="see-all-container">
+			<a href="all.html" class="see-all-button">See All Entries</a>
+		</div>
     </div>
+
     <script type="module" src="script.js"></script>
+
+    <script>
+      // After the house cards load, make them clickable
+      document.addEventListener('DOMContentLoaded', () => {
+          const statsDisplay = document.getElementById('stats-display');
+          statsDisplay.addEventListener('click', (event) => {
+              const card = event.target.closest('.house-card');
+              if (card) {
+                  const houseName = card.querySelector('.house-name').textContent.trim().toUpperCase();
+                  // Redirect to house-specific page (e.g., salus.html, fides.html, etc.)
+                  window.location.href = houseName.toLowerCase() + ".html";
+              }
+          });
+      });
+    </script>
 </body>
 </html>

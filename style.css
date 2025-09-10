@@ -67,6 +67,14 @@ h1 {
     line-height: 1;
 }
 
+.big-header .house-score {
+    font-size: 6em;   /* much bigger */
+}
+
+.big-header .house-name {
+    font-size: 2.5em; /* optional: make the name bigger too */
+}
+
 /* House specific colors */
 .house-salus {
     background-color: #e74c3c; /* Red */
@@ -137,6 +145,31 @@ h1 {
     font-weight: 600;
     color: #3498db; /* Blue color for points */
 }
+
+.see-all-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.see-all-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.1em;
+  font-weight: 600;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.see-all-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+
 
 @media (max-width: 768px) {
     .stats-grid {
