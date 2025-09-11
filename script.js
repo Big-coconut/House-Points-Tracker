@@ -1,5 +1,10 @@
+import { GAS_BASE_URL } from "./config.js";
+
+fetch(`${GAS_BASE_URL}?action=getData`)
+  .then(res => res.json())
+
 document.addEventListener('DOMContentLoaded', () => {
-    const url = 'https://script.google.com/macros/s/AKfycbxfv9mUf7yUeW9yYigry87J0clDUWwJxhfhG9HmOFujhzLbC-VwByiir1dUvsq6_N4/exec';
+    const url = GAS_BASE_URL;
 
     const statsDisplay = document.getElementById('stats-display');
 

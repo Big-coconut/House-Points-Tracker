@@ -1,5 +1,10 @@
+import { GAS_BASE_URL } from "./config.js";
+
+fetch(`${GAS_BASE_URL}?action=getData`)
+  .then(res => res.json())
+
 document.addEventListener('DOMContentLoaded', () => {
-    const url = 'https://script.google.com/macros/s/AKfycbyr27rxK9hJ5_zGEKb6-J-pCONJf-zgn3E7ZnXvCh-5EkI4CP4MVJdte6IvSz_V3H58/exec';
+    const url = GAS_BASE_URL;
 
     function formatDate(dateString) {
         const date = new Date(dateString);
