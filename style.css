@@ -148,11 +148,15 @@ h1 {
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.see-all-button:hover,
 .home-button:hover {
+  background-color: #2980b9;
+}
+
+.see-all-button:hover {
   background-color: #2980b9;
   transform: translateY(-2px);
 }
+	
 
 /* === Header with Home Button === */
 #house-header {
