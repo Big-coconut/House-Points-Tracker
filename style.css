@@ -135,7 +135,8 @@ h1 {
 }
 
 .see-all-button,
-.home-button {
+.home-button,
+.home-mobile {
   display: inline-block;
   padding: 12px 24px;
   font-size: 1.1em;
@@ -146,6 +147,10 @@ h1 {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.home-button {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
 .home-button:hover {
@@ -183,6 +188,27 @@ h1 {
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.mobile-view {
+  display: flex;
+  justify-content: center;
+}
+
+.home-mobile {
+  width: 40px;
+  text-align: center;
+  transform: translateY(10%);
+  font-size: 0.9em
+}
+
+/* Desktop / normal page by default */
+.normal-view {
+  display: block;  /* visible */
+}
+
+.mobile-view {
+  display: none;   /* hidden */
 }
 
 /* === Responsive === */
@@ -236,4 +262,11 @@ h1 {
 
   .entries-table tbody tr:last-child td { border-bottom: 1px solid #eee; }
   .entries-table tbody tr:last-child td:last-child { border-bottom: none; }
+  .normal-view {
+    display: none;  /* hide desktop div */
+  }
+
+  .mobile-view {
+    display: block; /* show mobile div */
+  }
 }
