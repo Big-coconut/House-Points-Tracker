@@ -16,6 +16,7 @@ body {
   max-width: 1200px;
   width: 100%;
   padding: 30px 40px;
+  padding-top: 15px;
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
@@ -183,24 +184,6 @@ h1 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
 }
 
-.home-button {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.mobile-view {
-  display: flex;
-  justify-content: center;
-}
-
-.home-mobile {
-  width: 40px;
-  text-align: center;
-  transform: translateY(10%);
-  font-size: 0.9em
-}
 
 /* Desktop / normal page by default */
 .normal-view {
@@ -269,4 +252,43 @@ h1 {
   .mobile-view {
     display: block; /* show mobile div */
   }
+}
+
+
+
+/* === Minimal Back Arrow === */
+.nav-bar {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+
+.nav-link,
+.back-link  {
+  display: inline-block;
+  height: 36px;
+  padding-right: 10px;
+  padding-left: 10px;
+  line-height: 34px;
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #333;
+  background-color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+	
+
+.back-link {
+  width: 16px;
+}
+
+
+
+.back-link:hover,
+.nav-link:hover {
+  background-color: #f0f0f0;
+  color: #000;
 }
