@@ -1,8 +1,5 @@
 import { GAS_BASE_URL } from "./config.js";
 
-fetch(`${GAS_BASE_URL}?action=getData`)
-  .then(res => res.json())
-
 document.addEventListener('DOMContentLoaded', () => {
     const url = GAS_BASE_URL;
 
@@ -64,9 +61,17 @@ document.addEventListener('DOMContentLoaded', () => {
             tr.appendChild(descTd);
 
             const pointsTd = document.createElement('td');
-            pointsTd.textContent = entry.Points;
-            pointsTd.setAttribute('data-label', 'Points');
-            tr.appendChild(pointsTd);
+			let points = entry.Points;
+
+			// Handle placeholder values
+			if (points === "?" || points === undefined || points === null) {
+			  pointsTd.textContent = "?";   // or "0" if you prefer numeric
+			} else {
+			  pointsTd.textContent = points;
+			}
+			pointsTd.setAttribute('data-label', 'Points');
+			tr.appendChild(pointsTd);
+
 
             tbody.appendChild(tr);
         });
@@ -83,8 +88,10 @@ document.addEventListener('DOMContentLoaded', () => {
             let entries = await response.json();
 
             // --- Apply house filter if set ---
-            if (houseFilter) {
-                entries = entries.filter(entry => entry.House.toUpperCase() === houseFilter.toUpperCase());
+            if (window.houseFilter) {
+                entries = entries.filter(entry =>
+					entry.House.toUpperCase().includes(window.houseFilter.toUpperCase())
+				);
             }
 
             createEntriesTable(entries);
